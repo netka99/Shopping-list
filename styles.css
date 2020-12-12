@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #c9f3ff 0%, #0696bf 100%);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+header, form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input, form button {
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  border: none;
+  background: white;
+  margin: 0.5rem;
+}
+
+form button {
+  color: #0696bf;
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all ;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #0696bf;
+  color: white;
+}
+
+.mainItemUl {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  background: white;
+  margin: 0.5rem;
+  transition: all 1s ease;
+justify-content: flex-end;
+list-style: none;
+}
+
+.container-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopping-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.mainItemUl li {
+ flex: 1;
+ margin-left: 0.4rem;
+ margin-right: 0.8rem;
+}
+
+.doneBtn, .trashBtn {
+  background: #0696bf;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 0.2rem;
+}
+
+.fa-trash-alt,
+.fa-check-square {
+  pointer-events: none;
+}
+
+.itemDoneTextCrossed{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.deletedItem {
+  transform: translateY(10rem) rotateZ(0deg);
+  opacity: 0;
+}
+
+filterList {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  border: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+
+.filterList {
+
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  color: #0696bf;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 12rem;
+  font-size: 1.3rem;
+}
+
+/* Arrow */
+.filterList::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: #0696bf;
+  cursor: pointer;
+  pointer-events: none;
+}
